@@ -10,3 +10,7 @@ export interface IProductItems {
   updatedAt: string;
   price: number;
 }
+
+export interface IProductById {
+  items: IProductItems;
+}

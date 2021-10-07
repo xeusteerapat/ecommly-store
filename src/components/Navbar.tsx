@@ -8,6 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 import { createTheme } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -46,7 +47,7 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
-            ECOMMLY SHOES SHOP
+            <Link to='/'>ECOMMLY SHOES SHOP</Link>
           </Typography>
           <Button color='inherit'>Login</Button>
           <Button color='inherit'>Register</Button>

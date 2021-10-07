@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import React from "react";
 import { IProductItems } from "../interfaces/Product";
+import { Link } from "react-router-dom";
 
 const ProductItem: React.FC<IProductItems> = ({
   productId,
@@ -33,7 +34,15 @@ const ProductItem: React.FC<IProductItems> = ({
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size='medium' variant='contained'>
+          <Button
+            size='medium'
+            variant='contained'
+            component={Link}
+            to={`products/${productId}`}
+            style={{
+              marginRight: "0.5rem",
+            }}
+          >
             View
           </Button>
           <Button size='medium' variant='contained'>

@@ -49,8 +49,12 @@ const Navbar = () => {
           <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
             <Link to='/'>ECOMMLY SHOES SHOP</Link>
           </Typography>
-          <Button color='inherit'>Login</Button>
-          <Button color='inherit'>Register</Button>
+          <Button color='inherit' component={Link} to='/signin'>
+            Login
+          </Button>
+          <Button color='inherit' component={Link} to='/signup'>
+            Register
+          </Button>
           <Button
             color='inherit'
             startIcon={<AddShoppingCartOutlinedIcon />}

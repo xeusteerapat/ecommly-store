@@ -4,7 +4,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProductPage from "./components/ProductPage";
+import Signin from "./components/Signin";
+import Signup from "./components/Signup";
 import Store from "./components/Store";
+import UserPage from "./components/UserPage";
+import Verify from "./components/Verify";
 
 const App = () => {
   return (
@@ -23,6 +27,26 @@ const App = () => {
                 <ProductPage productId={props.match.params.productId} />
               )}
             ></Route>
+          </Switch>
+          <Switch>
+            <Route path='/user' exact>
+              <UserPage />
+            </Route>
+          </Switch>
+          <Switch>
+            <Route path='/signup' exact>
+              <Signup />
+            </Route>
+          </Switch>
+          <Switch>
+            <Route path='/signin' exact>
+              <Signin />
+            </Route>
+          </Switch>
+          <Switch>
+            <Route path='/verify' exact>
+              <Verify />
+            </Route>
           </Switch>
         </Box>
       </Container>
